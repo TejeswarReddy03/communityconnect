@@ -1,0 +1,7 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# If the requested file or directory doesn't exist, route to index.php
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
